@@ -1,0 +1,26 @@
+.productPlus-icon,
+.productMinus-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background: none;
+  transition: all 0.3s ease;
+}
+.productPlus-icon {
+  border: 2px solid #7cdacc;
+  &:hover {
+    background-color: #7cdacc;
+    color: black;
+  }
+}
+.productMinus-icon {
+  border: 2px solid hsl(0, 100%, 70%);
+  &:hover {
+    color: black;
+    background-color: hsl(0, 100%, 70%);
+  }
+}

@@ -1,0 +1,169 @@
+:root {
+  --text-stroke-color: rgba(95, 95, 95, 0.6);
+  --text-color: #000;
+  --button-color: #29b6f6;
+  --text-button-color: #fff;
+  --background-color: rgba(255, 255, 255, 0.5);
+  --hover-text-width: 0%;
+  --border-right: 0px;
+  --animation-color: #000;
+  --fs-size: 2em;
+  --ShdowSize: 0px;
+  --backgroundImage: url("../patterns/45degreee_fabric.png");
+  --svg-card-actions: #444;
+  --details-color: rgba(0, 0, 0, 0.5019607843);
+  --dialog-background-color: #f1f1f1;
+  --dialog-text-color: hsl(0, 0%, 20%);
+  --card-background: rgba(255, 255, 255, 0.5);
+  --card-shadow-color: rgba(136, 136, 136, 0.627);
+}
+
+body.dark-theme {
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --background-color: rgba(34, 34, 34, 0.7);
+  --text-color: #fff;
+  --button-color: #fa0;
+  --text-button-color: #000;
+  --hover-text-width: 100%;
+  --animation-color: #fa0;
+  --ShdowSize: 23px;
+  --backgroundImage: url("../patterns/papyrus-dark.png");
+  --svg-card-actions: #9a9a9a;
+  --details-color: rgba(255, 255, 255, 0.5019607843);
+  --dialog-background-color: #222;
+  --dialog-text-color: hsl(0, 0%, 60%);
+  --card-background: rgba(57, 57, 57, 0.5);
+  --card-shadow-color: hsl(215, 13%, 36%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(var(--background-color), var(--background-color)), var(--backgroundImage);
+}
+
+button {
+  cursor: pointer;
+}
+
+.details-color {
+  color: var(--details-color);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.button-color {
+  color: var(--button-color);
+}
+
+.button {
+  border: 1px solid var(--button-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--button-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  color: var(--text-button-color);
+  background-color: var(--button-color);
+}
+.button-contained {
+  border: 1px solid var(--button-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text-button-color);
+  background-color: var(--button-color);
+  transition: all 0.3s ease;
+}
+.button-contained:hover {
+  color: var(--button-color);
+  background-color: transparent;
+}
+
+.flx-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: small;
+  background-color: #29b6f6;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+.tooltip .tooltip-icon {
+  position: absolute;
+  top: -90%;
+  transition: all 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+}
+.tooltip .right-arrow {
+  left: 7%;
+}
+.tooltip .left-arrow {
+  right: 7%;
+  transform: rotateY(180deg);
+}
+.tooltip .trash {
+  background-color: hsl(0, 100%, 70%);
+}
+.tooltip .trash-icon {
+  cursor: pointer;
+  color: hsl(0, 100%, 70%);
+}
+.tooltip:hover .tooltip-icon {
+  opacity: 1;
+  visibility: visible;
+  animation: animate-svg 1s ease forwards;
+}
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip:hover .tooltiptext::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-35deg);
+  animation: shine 1s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

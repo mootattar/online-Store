@@ -1,0 +1,9 @@
+.flx-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+}

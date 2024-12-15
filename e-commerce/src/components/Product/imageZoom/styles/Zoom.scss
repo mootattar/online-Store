@@ -1,0 +1,27 @@
+.zoomable-image-container {
+  position: relative; /* relative */
+  overflow: hidden; /* overflow-hidden */
+  border-radius: 0.5rem; /* rounded-lg */
+  background-color: #f3f4f6; /* bg-gray-100 */
+  aspect-ratio: 1 / 1; /* aspect-square */
+
+  /* تحديد العرض الأقصى من الكود المدمج */
+  max-width: 450px;
+}
+
+.zoomable-image {
+  width: 100%; /* w-full */
+  height: 100%; /* h-full */
+  object-fit: cover; /* object-cover */
+}
+
+.zoom-overlay {
+  position: absolute; /* absolute */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; /* inset-0 */
+  opacity: 1; /* opacity-100 */
+
+  /* الخلفية يتم تعيينها ديناميكيًا من خلال `style` داخل React */
+}

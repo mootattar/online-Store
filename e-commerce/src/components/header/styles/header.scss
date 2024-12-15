@@ -1,0 +1,77 @@
+.marketName {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: 900px) {
+    font-size: 1.5em;
+    margin-right: 15px;
+    right: 10%;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 1em;
+    margin-right: 15px;
+    right: 0;
+  }
+
+  .actual-text::after {
+    content: attr(data-foo);
+    position: absolute;
+    color: var(--animation-color);
+    width: var(--hover-text-width);
+    inset: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+
+  &:hover .actual-text::after {
+    width: 100%;
+    filter: drop-shadow(0 0 var(--ShdowSize) var(--animation-color));
+  }
+}
+
+[dir="rtl"] {
+  .marketName {
+    letter-spacing: 0.5px;
+
+    @media (max-width: 900px) {
+      margin-right: 0;
+      margin-left: 15px;
+      left: 10%;
+      right: 0;
+    }
+
+    @media (max-width: 520px) {
+      margin-right: 0;
+      margin-left: 15px;
+      left: 0;
+    }
+  }
+}
+
+.cart-badge {
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 55, 55);
+  color: white;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

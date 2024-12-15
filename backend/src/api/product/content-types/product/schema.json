@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "jacket"
+    },
+    "body": {
+      "type": "text",
+      "default": "the best jacket"
+    },
+    "price": {
+      "type": "decimal",
+      "default": 7.99
+    },
+    "cat": {
+      "type": "enumeration",
+      "enum": [
+        "men",
+        "women",
+        "kids"
+      ],
+      "default": "men"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "product"
+    },
+    "sizes": {
+      "type": "enumeration",
+      "enum": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "default": "M"
+    },
+    "averageRating": {
+      "type": "integer",
+      "default": 1
+    }
+  }
+}

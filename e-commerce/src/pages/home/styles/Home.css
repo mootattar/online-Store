@@ -1,0 +1,11 @@
+.flx-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (max-width: 600px) {
+  .flx-center {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=Home.css.map */

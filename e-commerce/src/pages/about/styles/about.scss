@@ -1,0 +1,116 @@
+.card-client {
+  background: #2cb5a0;
+  width: 13rem;
+  padding: 25px 20px;
+  border: 4px solid #7cdacc;
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  margin: 3rem auto 0;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .social-media {
+    direction: ltr;
+    .tooltip-social {
+      background: #262626;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      padding: 0.5rem 0.4rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -90%);
+      transition: all 0.2s ease;
+      z-index: 1;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        border: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: transparent;
+        transform: translate(-50%, 100%);
+      }
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      position: relative;
+      margin-right: 15px;
+      text-decoration: none;
+      color: inherit;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      svg {
+        width: 1.1rem;
+        fill: currentColor;
+      }
+
+      .tooltip-social:after {
+        border-top-color: #262626;
+      }
+
+      &:hover .tooltip-social {
+        opacity: 1;
+        transform: translate(-50%, -130%);
+      }
+    }
+  }
+
+  .user-picture {
+    overflow: hidden;
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+    border: 4px solid #7cdacc;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    svg {
+      width: 2.5rem;
+      fill: currentColor;
+    }
+  }
+
+  .name-client {
+    margin: 20px 0 0;
+    font-weight: 600;
+    font-size: 18px;
+
+    span {
+      display: block;
+      margin-top: 0.25rem;
+      font-weight: 200;
+      font-size: 16px;
+    }
+  }
+
+  .hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background: #7cdacc;
+    border: none;
+  }
+}

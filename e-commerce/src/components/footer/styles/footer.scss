@@ -1,0 +1,65 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .storeInfo {
+    flex: 1;
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #bbb;
+    }
+  }
+
+  .navLinks,
+  .socialMedia {
+    flex: 1;
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin: 0.5rem 0;
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s;
+          &:hover {
+            color: #f90;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+}

@@ -1,0 +1,211 @@
+// light theme
+$background-color-light: rgb(255, 255, 255, 0.5);
+$text-stroke-color-light: #5f5f5f99;
+$text-color-light: #000;
+$animation-color-light: #000;
+$svg-card-actions-light: #444;
+$details-color-light: #00000080;
+$dialog-background-color-light: #f1f1f1;
+$dalog-text-color-light: hsl(0, 0%, 20%);
+$button-color-light: #29b6f6;
+$text-button-color-light: #fff;
+$card-shadow-color-light: rgba(136, 136, 136, 0.627);
+$card-background-light: rgba(255, 255, 255, 0.5);
+
+// sizes
+$border-right: 0px;
+$fs-size: 2em;
+$width: 0%;
+$--border-right-lang: "border-right";
+
+// dark theme
+
+$background-color-dark: rgb(34, 34, 34, 0.7);
+$text-stroke-color-dark: #ffffff99;
+$text-color-dark: #fff;
+$animation-color-dark: #fa0;
+$svg-card-actions-dark: #9a9a9a;
+$details-color-dark: #ffffff80;
+$dialog-background-color-dark: #222;
+$dialog-text-color-dark: hsl(0, 0%, 60%);
+$button-color-dark: #fa0;
+$text-button-color-dark: #000;
+$card-background-dark: rgba(57, 57, 57, 0.5);
+$card-shadow-color-dark: hsl(215, 13%, 36%);
+
+:root {
+  --text-stroke-color: #{$text-stroke-color-light};
+  --text-color: #{$text-color-light};
+  --button-color: #{$button-color-light};
+  --text-button-color: #{$text-button-color-light};
+  --background-color: #{$background-color-light};
+  --hover-text-width: 0%;
+  --border-right: #{$border-right};
+  --animation-color: #{$animation-color-light};
+  --fs-size: #{$fs-size};
+  --ShdowSize: 0px;
+  --backgroundImage: url("../patterns/45degreee_fabric.png");
+  --svg-card-actions: #{$svg-card-actions-light};
+  --details-color: #{$details-color-light};
+  --dialog-background-color: #{$dialog-background-color-light};
+  --dialog-text-color: #{$dalog-text-color-light};
+  --card-background: #{$card-background-light};
+  --card-shadow-color: #{$card-shadow-color-light};
+}
+
+body.dark-theme {
+  --text-stroke-color: #{$text-stroke-color-dark};
+  --background-color: #{$background-color-dark};
+  --text-color: #{$text-color-dark};
+  --button-color: #{$button-color-dark};
+  --text-button-color: #{$text-button-color-dark};
+  --hover-text-width: 100%;
+  --animation-color: #{$animation-color-dark};
+  --ShdowSize: 23px;
+  --backgroundImage: url("../patterns/papyrus-dark.png");
+  --svg-card-actions: #{$svg-card-actions-dark};
+  --details-color: #{$details-color-dark};
+  --dialog-background-color: #{$dialog-background-color-dark};
+  --dialog-text-color: #{$dialog-text-color-dark};
+  --card-background: #{$card-background-dark};
+  --card-shadow-color: #{$card-shadow-color-dark};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(
+      var(--background-color),
+      var(--background-color)
+    ),
+    var(--backgroundImage);
+}
+button {
+  cursor: pointer;
+}
+.details-color {
+  color: var(--details-color);
+}
+.text-color {
+  color: var(--text-color);
+}
+.button-color {
+  color: var(--button-color);
+}
+
+// main button
+.button {
+  border: 1px solid var(--button-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--button-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  &:hover {
+    color: var(--text-button-color);
+    background-color: var(--button-color);
+  }
+  &-contained {
+    border: 1px solid var(--button-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text-button-color);
+    background-color: var(--button-color);
+    transition: all 0.3s ease;
+    &:hover {
+      color: var(--button-color);
+      background-color: transparent;
+    }
+  }
+}
+
+.flx-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: small;
+    background-color: #29b6f6;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .tooltip-icon {
+    position: absolute;
+    top: -90%;
+    transition: all 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+  }
+  .right-arrow {
+    left: 7%;
+  }
+  .left-arrow {
+    right: 7%;
+    transform: rotateY(180deg);
+  }
+  .trash {
+    background-color: hsl(0, 100%, 70%);
+  }
+  .trash-icon {
+    cursor: pointer;
+    color: hsl(0, 100%, 70%);
+  }
+  &:hover {
+    .tooltip-icon {
+      opacity: 1;
+      visibility: visible;
+      animation: animate-svg 1s ease forwards;
+    }
+    .tooltiptext {
+      opacity: 1;
+      visibility: visible;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -200%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-35deg);
+        animation: shine 1s ease-in-out;
+      }
+    }
+  }
+}

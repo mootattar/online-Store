@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "reviews",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "review": {
+      "type": "string"
+    },
+    "auther": {
+      "type": "string",
+      "required": true
+    },
+    "stars": {
+      "type": "integer",
+      "max": 5
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "reviews"
+    },
+    "userId": {
+      "type": "text"
+    },
+    "Time": {
+      "type": "string"
+    }
+  }
+}

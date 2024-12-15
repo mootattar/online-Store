@@ -1,0 +1,103 @@
+.card-client {
+  background: #2cb5a0;
+  width: 13rem;
+  padding: 25px 20px;
+  border: 4px solid #7cdacc;
+  box-shadow: 0 6px 10px rgb(207, 212, 222);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  margin: 3rem auto 0;
+}
+.card-client:hover {
+  transform: translateY(-10px);
+}
+.card-client .social-media {
+  direction: ltr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-client .social-media .tooltip-social {
+  background: #262626;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+.card-client .social-media .tooltip-social:after {
+  content: " ";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+.card-client .social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+.card-client .social-media a:last-child {
+  margin-right: 0;
+}
+.card-client .social-media a svg {
+  width: 1.1rem;
+  fill: currentColor;
+}
+.card-client .social-media a .tooltip-social:after {
+  border-top-color: #262626;
+}
+.card-client .social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+.card-client .user-picture {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  border: 4px solid #7cdacc;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.card-client .user-picture svg {
+  width: 2.5rem;
+  fill: currentColor;
+}
+.card-client .name-client {
+  margin: 20px 0 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+.card-client .name-client span {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 200;
+  font-size: 16px;
+}
+.card-client .hr {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #7cdacc;
+  border: none;
+}/*# sourceMappingURL=about.css.map */

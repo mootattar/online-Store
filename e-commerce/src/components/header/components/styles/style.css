@@ -1,0 +1,36 @@
+.dropDown {
+  position: relative;
+  display: inline-block;
+}
+.dropDown .settings {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  cursor: default;
+  top: 110%;
+  right: 0;
+  background-color: #343738;
+  border-radius: 10px;
+  padding: 4px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+.dropDown .settings button {
+  padding: 8px;
+  border: none;
+  color: #fff;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.dropDown .settings button:hover {
+  background-color: #555;
+}
+.dropDown .show {
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}/*# sourceMappingURL=style.css.map */
